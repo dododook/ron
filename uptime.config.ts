@@ -10,7 +10,7 @@ const pageConfig = {
   // [OPTIONAL] Group your monitors
   // If not specified, all monitors will be shown in a single list
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
-  group: {
+  // group: {
     "🌐 Public (example group name)": ['google_monitor', 'bar_monitor', 'more monitor ids...'],
     "🔐 Private": ['ssh_monitor'],
   },
@@ -18,37 +18,35 @@ const pageConfig = {
 
 const workerConfig = {
   kvWriteCooldownMinutes: 3,
-   // passwordProtection: 'username:password',
   monitors: [
     {
       id: 'google_monitor',
-      name: 'My Google Monitor',
+      name: 'My Blog Monitor',
       method: 'GET',
-      target: 'https://www.google.com'
+      target: 'https://vwo50.club',
+        tooltip: 'This is a tooltip for this monitor',
+  // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+  statusPageLink: 'https://example.com',
     },
+
+ {
+      id: 'google_monitor',
+      name: 'My Nav Monitor',
+      method: 'GET',
+      target: 'https://u1s1.one',
+     tooltip: 'This is a tooltip for this monitor',
+  // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+  statusPageLink: 'https://example.com',
+    },
+
     {
       id: 'ssh_monitor',
-      name: 'Example SSH Monitor',
+      name: 'Oracle Monitor',
       method: 'TCP_PING',
-      target: '47.242.150.235:22'
-    },
-     {
-      id: 'ssh_monitor',
-      name: 'Example SSH Monitor',
-      method: 'TCP_PING',
-      target: '47.242.0.227:22'
-    },
-     {
-      id: 'ssh_monitor',
-      name: 'Example SSH Monitor',
-      method: 'TCP_PING',
-      target: '8.217.213.139:22'
-    },
-     {
-      id: 'ssh_monitor',
-      name: 'Example SSH Monitor',
-      method: 'TCP_PING',
-      target: '120.241.144.143:22'
+      target: '47.242.150.235:22',
+        tooltip: 'This is a tooltip for this monitor',
+  // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+  statusPageLink: 'https://example.com',
     },
   ],
   callbacks: {
