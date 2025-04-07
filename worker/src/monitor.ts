@@ -22,7 +22,7 @@ export async function getStatus(
 
       // Now we have an `opened` promise!
       // @ts-ignore
-      await withTimeout(monitor.timeout || 10000, socket.opened)
+      await withTimeout(monitor.timeout || 500, socket.opened)
       await socket.close()
 
       console.log(`${monitor.name} connected to ${monitor.target}`)
@@ -41,7 +41,7 @@ export async function getStatus(
   } else {
     // HTTP endpoint monitor
     try {
-      const response = await fetchTimeout(monitor.target, monitor.timeout || 10000, {
+      const response = await fetchTimeout(monitor.target, monitor.timeout || 500, {
         method: monitor.method,
         headers: monitor.headers as any,
         body: monitor.body,
@@ -98,7 +98,7 @@ export async function getStatus(
     } catch (e: any) {
       console.log(`${monitor.name} errored with ${e.name}: ${e.message}`)
       if (e.name === 'AbortError') {
-        status.ping = monitor.timeout || 10000
+        status.ping = monitor.timeout || 500
         status.up = false
         status.err = `Timeout after ${status.ping}ms`
       } else {
