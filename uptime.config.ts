@@ -1,8 +1,8 @@
 const pageConfig = {
-  title: "lyc8503's Status Page",
+  title: "ron's Status Page",
   links: [
-    { link: 'https://github.com/lyc8503', label: 'GitHub' },
-    { link: 'mailto:me@lyc8503.site', label: 'Email Me', highlight: true },
+    { link: 'https://github.com/dododook', label: 'GitHub' },
+    { link: 'mailto:yaoguangting@gmail.com', label: 'Email Me', highlight: true },
   ],
 }
 
@@ -14,13 +14,13 @@ const workerConfig = {
       id: 'google_monitor',
       name: 'My Google Monitor',
       method: 'GET',
-      target: 'https://www.google.com'
+      target: 'https://vps.128128.best'
     },
     {
       id: 'ssh_monitor',
       name: 'Example SSH Monitor',
       method: 'TCP_PING',
-      target: '1.2.3.4:22'
+      target: '47.242.150.235:22'
     },
   ],
   callbacks: {
