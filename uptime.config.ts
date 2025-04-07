@@ -11,31 +11,44 @@ const pageConfig = {
   // If not specified, all monitors will be shown in a single list
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
-    "🌐 Public (example group name)": ['VPS_monitor', 'bar_monitor', 'more monitor ids...'],
+    "🌐 Public (example group name)": ['google_monitor', 'bar_monitor', 'more monitor ids...'],
     "🔐 Private": ['ssh_monitor'],
   },
 }
 
 const workerConfig = {
   kvWriteCooldownMinutes: 3,
-  // passwordProtection: 'username:password',
+   // passwordProtection: 'username:password',
   monitors: [
     {
-      id: 'VPS_monitor',
+      id: 'google_monitor',
       name: 'My Google Monitor',
       method: 'GET',
-      target: 'https://vps.128128.best'
+      target: 'https://www.google.com'
     },
     {
       id: 'ssh_monitor',
-      name: 'Example TCP Monitor',
-      // `method` should be `TCP_PING` for tcp monitors
+      name: 'Example SSH Monitor',
       method: 'TCP_PING',
-      // `target` should be `host:port` for tcp monitors
-      target: '47.242.150.235:22',
-      tooltip: 'My production server SSH',
-      statusPageLink: 'https://vps.128128.best',
-      timeout: 5000,
+      target: '47.242.150.235:22'
+    },
+     {
+      id: 'ssh_monitor',
+      name: 'Example SSH Monitor',
+      method: 'TCP_PING',
+      target: '47.242.0.227:22'
+    },
+     {
+      id: 'ssh_monitor',
+      name: 'Example SSH Monitor',
+      method: 'TCP_PING',
+      target: '8.217.213.139:22'
+    },
+     {
+      id: 'ssh_monitor',
+      name: 'Example SSH Monitor',
+      method: 'TCP_PING',
+      target: '120.241.144.143:22'
     },
   ],
   callbacks: {
