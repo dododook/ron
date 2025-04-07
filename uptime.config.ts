@@ -31,6 +31,9 @@ const workerConfig = {
       name: 'Example SSH Monitor',
       method: 'TCP_PING',
       target: '47.242.150.235:22'
+      tooltip: 'My production server SSH',
+      statusPageLink: 'https://example.com',
+      timeout: 5000,
     },
   ],
   callbacks: {
