@@ -1,19 +1,12 @@
 const pageConfig = {
   // Title for your status page
-  title: "RON's Status Page",
+  title: "hxd Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://github.com/dododook', label: 'GitHub' },
-    { link: 'https://128128.best/', label: 'Blog' },
-    { link: 'mailto:me@lyc8503.net', label: 'Email Me', highlight: true },
+    { link: 'https://vwo50.club', label: 'Blog' },
+    { link: 'https://u1s1.one', label: 'Nav Site' },
+    { link: 'https://md.u1s1.one/', label: 'markdown', highlight: true },
   ],
-  // [OPTIONAL] Group your monitors
-  // If not specified, all monitors will be shown in a single list
-  // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
-  // group: {
-    "🌐 Public (example group name)": ['google_monitor', 'bar_monitor', 'more monitor ids...'],
-    "🔐 Private": ['ssh_monitor'],
-  },
 }
 
 const workerConfig = {
@@ -43,7 +36,7 @@ const workerConfig = {
       id: 'ssh_monitor',
       name: 'Oracle Monitor',
       method: 'TCP_PING',
-      target: '47.242.150.235:22',
+      target: 'X.X.X.X:22',
         tooltip: 'This is a tooltip for this monitor',
   // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
   statusPageLink: 'https://example.com',
