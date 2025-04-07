@@ -11,7 +11,7 @@ const pageConfig = {
   // If not specified, all monitors will be shown in a single list
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
-    "🌐 Public (example group name)": ['google_monitor', 'bar_monitor', 'more monitor ids...'],
+    "🌐 Public (example group name)": ['VPS_monitor', 'bar_monitor', 'more monitor ids...'],
     "🔐 Private": ['ssh_monitor'],
   },
 }
@@ -21,18 +21,20 @@ const workerConfig = {
   // passwordProtection: 'username:password',
   monitors: [
     {
-      id: 'google_monitor',
+      id: 'VPS_monitor',
       name: 'My Google Monitor',
       method: 'GET',
-      target: 'https://www.google.com'
+      target: 'https://vps.128128.best'
     },
     {
       id: 'ssh_monitor',
-      name: 'Example SSH Monitor',
+      name: 'Example TCP Monitor',
+      // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
-      target: '47.242.150.235:22'
+      // `target` should be `host:port` for tcp monitors
+      target: '47.242.150.235:22',
       tooltip: 'My production server SSH',
-      statusPageLink: 'https://example.com',
+      statusPageLink: 'https://vps.128128.best',
       timeout: 5000,
     },
   ],
