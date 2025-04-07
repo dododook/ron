@@ -5,7 +5,7 @@ const pageConfig = {
   links: [
     { link: 'https://github.com/dododook', label: 'GitHub' },
     { link: 'https://128128.best', label: 'Blog' },
-    { link: 'mailto:yaoguangting@gmail.com', label: 'Email Me', highlight: true },
+    { link: 'mailto:yaoguangting@gmail.com1', label: 'Email Me', highlight: true },
   ],
   // [OPTIONAL] Group your monitors
   // If not specified, all monitors will be shown in a single list
