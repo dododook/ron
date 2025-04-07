@@ -1,45 +1,26 @@
 const pageConfig = {
-  // Title for your status page
-  title: "hxd Status Page",
-  // Links shown at the header of your status page, could set `highlight` to `true`
+  title: "lyc8503's Status Page",
   links: [
-    { link: 'https://vwo50.club', label: 'Blog' },
-    { link: 'https://u1s1.one', label: 'Nav Site' },
-    { link: 'https://md.u1s1.one/', label: 'markdown', highlight: true },
+    { link: 'https://github.com/lyc8503', label: 'GitHub' },
+    { link: 'mailto:me@lyc8503.site', label: 'Email Me', highlight: true },
   ],
 }
 
 const workerConfig = {
   kvWriteCooldownMinutes: 3,
+  passwordProtection: 'username:password',
   monitors: [
     {
       id: 'google_monitor',
-      name: 'My Blog Monitor',
+      name: 'My Google Monitor',
       method: 'GET',
-      target: 'https://vwo50.club',
-        tooltip: 'This is a tooltip for this monitor',
-  // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-  statusPageLink: 'https://example.com',
+      target: 'https://www.google.com'
     },
-
- {
-      id: 'google_monitor',
-      name: 'My Nav Monitor',
-      method: 'GET',
-      target: 'https://u1s1.one',
-     tooltip: 'This is a tooltip for this monitor',
-  // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-  statusPageLink: 'https://example.com',
-    },
-
     {
       id: 'ssh_monitor',
-      name: 'Oracle Monitor',
+      name: 'Example SSH Monitor',
       method: 'TCP_PING',
-      target: 'X.X.X.X:22',
-        tooltip: 'This is a tooltip for this monitor',
-  // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-  statusPageLink: 'https://example.com',
+      target: '47.242.150.235:22'
     },
   ],
   callbacks: {
