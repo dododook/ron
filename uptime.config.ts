@@ -11,7 +11,7 @@ const pageConfig = {
   // If not specified, all monitors will be shown in a single list
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
-    "🌐 Public (example group name)": ['foo_monitor', 'bar_monitor', 'more monitor ids...'],
+    "🌐 Public (example group name)": ['google_monitor', 'bar_monitor', 'more monitor ids...'],
     "🔐 Private": ['ssh_monitor'],
   },
 }
